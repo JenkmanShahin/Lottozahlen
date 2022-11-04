@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lottozahlen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lottozahlen" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-lu-QYm">
+                                <rect key="frame" x="51" y="99" width="288" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yvf-lu-QYm" secondAttribute="height" multiplier="36:35" id="9ab-oM-0Gq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hettige Lottozahlen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9P-G4-Idf">
+                                <rect key="frame" x="76" y="433" width="238" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="u9P-G4-Idf" secondAttribute="height" multiplier="119:15" id="Cni-rI-CVg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtr-lm-ILl">
+                                <rect key="frame" x="115" y="738" width="162" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qtr-lm-ILl" secondAttribute="height" multiplier="162:35" id="sPQ-0S-X7k"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Zahlen generieren"/>
+                                <connections>
+                                    <action selector="zahlengenerieren:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0y8-jT-gqS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zX-Gz-qWi">
+                                <rect key="frame" x="76" y="535" width="238" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9zX-Gz-qWi" secondAttribute="height" multiplier="119:19" id="fVT-Ff-F0W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yvf-lu-QYm" secondAttribute="trailing" constant="51" id="2Fo-xf-snd"/>
+                            <constraint firstItem="9zX-Gz-qWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="4Dt-Gs-xNS"/>
+                            <constraint firstItem="Qtr-lm-ILl" firstAttribute="top" secondItem="9zX-Gz-qWi" secondAttribute="bottom" constant="165" id="8ir-3O-N6R"/>
+                            <constraint firstItem="u9P-G4-Idf" firstAttribute="top" secondItem="Yvf-lu-QYm" secondAttribute="bottom" constant="54" id="Dy7-6c-68U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9zX-Gz-qWi" secondAttribute="trailing" constant="76" id="HUW-50-uJ8"/>
+                            <constraint firstItem="u9P-G4-Idf" firstAttribute="top" secondItem="Yvf-lu-QYm" secondAttribute="bottom" constant="54" id="MWD-e5-gYf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qtr-lm-ILl" secondAttribute="bottom" constant="37" id="PgZ-cc-Xg4"/>
+                            <constraint firstItem="Yvf-lu-QYm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="TXE-CW-nnV"/>
+                            <constraint firstItem="u9P-G4-Idf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="Ugj-7F-2fs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qtr-lm-ILl" secondAttribute="trailing" constant="113" id="aKJ-pr-UgY"/>
+                            <constraint firstItem="Qtr-lm-ILl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="d1X-Xr-YaZ"/>
+                            <constraint firstItem="Yvf-lu-QYm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="gPW-uh-OTi"/>
+                            <constraint firstItem="9zX-Gz-qWi" firstAttribute="top" secondItem="u9P-G4-Idf" secondAttribute="bottom" constant="52" id="k53-ya-y5C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u9P-G4-Idf" secondAttribute="trailing" constant="76" id="qbX-4l-cnF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="zahlen" destination="9zX-Gz-qWi" id="Itu-AM-tH7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="10.769230769230768" y="-34.123222748815166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lottozahlen" width="1273" height="1273"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
